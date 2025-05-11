@@ -13,10 +13,8 @@ struct Upload: View {
             Color.bg
                 .ignoresSafeArea()
             Image("bgpic")
-            Image("wink")
-                .resizable()
-                .frame(width: 250, height: 250)
-                .padding(.trailing, 800)
+            GIFImage(name: "winky")
+                .padding(.trailing, 850)
                 .padding(.top, 500)
             HStack{
                 VStack{

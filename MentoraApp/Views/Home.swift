@@ -48,7 +48,8 @@ struct Home: View {
                 Spacer().frame(width: 65)
                 VStack {
                     Button(action: {
-                        // Action here
+                      
+
                     }) {
                         Text("Create game")
                             .font(Font.custom("IBMPlexMono-Bold", size: 34))
