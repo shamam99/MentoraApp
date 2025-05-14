@@ -1,8 +1,8 @@
 //
-//  SplashView.swift
-//  Mentora
+//  ContentView.swift
+//  team 19
 //
-//  Created by Shamam Alkafri on 05/05/2025.
+//  Created by Najla adel alabdullah on 07/11/1446 AH.
 //
 
 import SwiftUI
@@ -10,22 +10,26 @@ import SwiftUI
 struct SplashView: View {
     var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
-            VStack {
-                Spacer()
-                Image(systemName: "sparkles")
+            VStack(spacing: 40) { // More spacing for iPad
+                Image("logo") // Image name is "logo"
                     .resizable()
-                    .frame(width: 80, height: 80)
-                    .foregroundColor(.white)
-                Text("Mentora")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .bold()
-                Spacer()
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                    .padding(.bottom, 40)
+                    .scaledToFit()
+                    .frame(width: 300, height: 300) // Larger logo size
+                
+                Text("Mentura")
+                    .font(Font.custom("IBMPlexMono-Bold", size: 34)) // Larger font size
+                    .foregroundColor(.black) // Set text color
+                
+                Text("Where learning and fun meets")
+                    .font(.system(size: 24)) // Slightly larger for the second line
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center) // Center alignment for the second line
             }
+            .padding(.horizontal, 80) // Adequate side padding for iPad
         }
     }
+}
+
+#Preview {
+    SplashView()
 }
