@@ -9,6 +9,9 @@ import SwiftUI
 
 class QuestionReviewViewModel: ObservableObject {
     @Published var questions: [String] = [
+        "What is the capital of France?",
+        "Explain Newton's First Law.",
+        "What is the square root of 144?"
 
     ]
     

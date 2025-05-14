@@ -66,14 +66,16 @@ struct QuestionReviewView: View {
                             )
 
                         ScrollView {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: 34) {
                                 ForEach(viewModel.questions, id: \.self) { question in
-                                    Text("• \(question)")
-                                        .padding(.horizontal)
+                                    Text(question)
+                                        .font(Font.custom("IBMPlexMono-Bold", size: 23))
+                                        .fixedSize(horizontal: false, vertical: true)
                                 }
                             }
-                            .padding(.vertical)
-                        }
+                            .padding(120)
+                            .padding(.leading, -90)   // ← يحرك المحتوى شوي يسار
+                            .frame(maxWidth: .infinity, alignment: .leading)                        }
                     }
                     .padding(.bottom, 40)
 
